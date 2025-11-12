@@ -20,6 +20,9 @@ jobs:
         pip install -r requirements.txt
         pip install pytest pytest-cov
         
+    - name: Install app in development mode
+      run: pip install -e .
+        
     - name: Run Flask tests
       env:
         FLASK_ENV: testing
